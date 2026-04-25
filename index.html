@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles/mainPageStyle.css">
+</head>
+<body>
+<h1 id="title" class="positioned-text"></h1>
+
+<p id="description" class="description"></p>
+
+<p id="mainPageP" class="mainPageP"></p>
+
+<div class="button-container">
+
+    <div id="buttonPaneText" class="buttonPaneText"></div>
+
+    <nav class="button-group">
+        <a id="button1" href="subPage1.html" class="styled-button">Technology</a>
+		<a id="button2" href="subPage2.html" class="styled-button">Multimedia Demonstration</a>
+		<a id="button3" href="subPage3.html" class="styled-button">Applications for Cleverbridge</a>
+
+    </nav>
+</div>
+
+<div id="language-switcher">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('de')">Deutsch</button>
+    <button onclick="setLanguage('tr')">Türkçe</button>
+    <button onclick="setLanguage('am')">አማርኛ</button>
+</div>
+
+<footer>
+    <p id="footer-text">/p>
+</footer>
+
+<script>
+    const translations = {
+        en: {
+            title: "Welcome to the PS5 Project",
+            description: "Explore multimedia technologies and their applications.",
+            mainPageP: "Select a subpage to learn more.",
+            buttonPaneText: "Choose a Subpage",
+			button1: "Technology",
+			button2: "Multimedia Demonstration",
+			button3: "Applications for Cleverbridge",
+            footerText: "Created by: Arda Köylü  s240987@th-ab.de & Ahmed Mohammedseid  s231120@th-ab.de"
+        },
+        de: {
+            title: "Willkommen beim PS5-Projekt",
+            description: "Entdecken Sie Multimedia-Technologien und ihre Anwendungen.",
+            mainPageP: "Wählen Sie eine Unterseite, um mehr zu erfahren.",
+            buttonPaneText: "Wählen Sie eine Unterseite",
+			 button1: "Technologie",
+			button2: "Multimedia-Demonstration",
+			button3: "Anwendungen für Cleverbridge",
+            footerText: "Erstellt von: Arda Köylü  s240987@th-ab.de & Ahmed Mohammedseid  s231120@th-ab.de"
+        },
+        tr: {
+            title: "PS5 Projesine Hoş Geldiniz",
+            description: "Multimedya teknolojilerini ve uygulamalarını keşfedin.",
+            mainPageP: "Daha fazla bilgi edinmek için bir alt sayfa seçin.",
+            buttonPaneText: "Bir Alt Sayfa Seçin",
+			button1: "Teknoloji",
+			button2: "Multimedya Gösterisi",
+			button3: "Cleverbridge için Uygulamalar",
+            footerText: "Hazırlayanlar: Arda Köylü  s240987@th-ab.de & Ahmed Mohammedseid  s231120@th-ab.de"
+        },
+        am: {
+            title: "እንኳን ወደ PS5 ፕሮጀክት በደህና መጡ",
+            description: "መልቲሚዲያ ቴክኖሎጂዎችን እና መተግበሪያቸውን ያስሱ።",
+            mainPageP: "ተጨማሪ ለማወቅ አንድ ንዑስ ገጽ ይምረጡ።",
+            buttonPaneText: "አንድ ንዑስ ገጽ ይምረጡ",
+			button1: "ቴክኖሎጂ",
+			button2: "የመልቲሚዲያ ማሳያ",
+			button3: "ለክሌቨርብሪጅ መተግበሪያዎች",
+            footerText: "የተሰራው በ፡ አርዳ ኩይሉ s240987@th-ab.de እና አህመድ ሙሐመድሰዒድ s231120@th-ab.de"
+        }
+    };
+
+    let currentLanguage = 'en';
+
+    function setLanguage(language) {
+        currentLanguage = language;
+        const textElements = {
+            title: document.getElementById("title"),
+            description: document.getElementById("description"),
+            mainPageP: document.getElementById("mainPageP"),
+            buttonPaneText: document.getElementById("buttonPaneText"),
+			 button1: document.getElementById("button1"),
+			button2: document.getElementById("button2"),
+			button3: document.getElementById("button3"),
+            footerText: document.getElementById("footer-text")
+        };
+        Object.keys(textElements).forEach(key => {
+            if (textElements[key]) {
+                textElements[key].innerText = translations[currentLanguage][key];
+            }
+        });
+    }
+
+    function navigateToPage(page) {
+        const url = new URL(page, window.location.origin);
+        url.searchParams.append("lang", currentLanguage);
+        window.location.href = url;
+    }
+
+    // Set default language on page load
+    setLanguage(currentLanguage);
+
+
+</script>
+</body>
+</html>

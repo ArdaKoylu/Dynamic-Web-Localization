@@ -1,0 +1,113 @@
+body {
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #b7bac3;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #3b82f6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+nav > button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+}
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    top: 250px;
+}
+
+.styled-button:hover {
+    background-color: #2563eb;
+}
+#language-switcher {
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#language-switcher > button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#language-switcher > button:hover {
+  background-color: #2563eb;
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url('../assets/fonts/myFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1#title {
+    font-family: 'myFont', sans-serif;
+    font-size: 4.5rem;
+    color: #3b82f6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+ul {
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  width: 1650px;
+  font-size: 1.2rem;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 2px solid #3b82f6;
+  white-space: normal;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}

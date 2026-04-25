@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Applications for Cleverbridge</title>
+    <link rel="stylesheet" href="styles/subPage3Style.css">
+</head>
+<body>
+<h1 id="title"></h1>
+
+<section id="content"></section>
+
+<nav>
+    <a id="mainPageButton" href="index.html" class="styled-button">Main Page</a>
+</nav>
+
+<div id="language-switcher">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('de')">Deutsch</button>
+    <button onclick="setLanguage('tr')">Türkçe</button>
+    <button onclick="setLanguage('am')">አማርኛ</button>
+</div>
+
+<script>
+    const translations = {
+        en: {
+            title: "Applications for Cleverbridge",
+            content: `
+                <p>The PlayStation 5 has some amazing features that Cleverbridge could use for its work. This page explains how its technology could help improve products and services.</p>
+                <ul>
+                    <li><strong>Products:</strong> Cleverbridge could use the PS5’s 3D graphics for online stores. Customers could view and interact with products in a more exciting and realistic way.</li>
+                    <li><strong>Employee Training:</strong> The PS5’s multimedia features could also make employee training better. For example, virtual reality could be used to create realistic training sessions for different job roles.</li>
+                    <li><strong>Inclusivity:</strong> The controller’s special feedback system could help make tools for people with disabilities. This could ensure Cleverbridge’s products are useful to everyone.</li>
+                    <li><strong>Future Growth:</strong> By using ideas from the PS5, Cleverbridge can stay ahead in technology, improve customer experiences, and grow into new areas.</li>
+                </ul>`,
+            mainPageButton: "Main Page"
+        },
+        de: {
+            title: "Anwendungen für Cleverbridge",
+            content: `
+                <p>Die PlayStation 5 bietet erstaunliche Funktionen, die Cleverbridge für seine Arbeit nutzen könnte. Diese Seite erklärt, wie ihre Technologie dazu beitragen könnte, Produkte und Dienstleistungen zu verbessern.</p>
+                <ul>
+                    <li><strong>Produkte:</strong> Cleverbridge könnte die 3D-Grafik der PS5 für Online-Shops nutzen. Kunden könnten Produkte auf aufregendere und realistischere Weise betrachten und interagieren.</li>
+                    <li><strong>Mitarbeiterschulung:</strong> Die Multimedia-Funktionen der PS5 könnten auch Mitarbeiterschulungen verbessern. Beispielsweise könnte Virtual Reality verwendet werden, um realistische Schulungsszenarien für verschiedene Rollen zu erstellen.</li>
+                    <li><strong>Inklusivität:</strong> Das spezielle Feedback-System des Controllers könnte helfen, Werkzeuge für Menschen mit Behinderungen zu entwickeln. Dadurch könnten Cleverbridge-Produkte für alle nützlich sein.</li>
+                    <li><strong>Zukunftswachstum:</strong> Durch die Nutzung von PS5-Ideen kann Cleverbridge technologisch vorausbleiben, Kundenerfahrungen verbessern und in neue Bereiche wachsen.</li>
+                </ul>`,
+            mainPageButton: "Hauptseite"
+        },
+        tr: {
+            title: "Cleverbridge İçin Uygulamalar",
+            content: `
+                <p>PlayStation 5, Cleverbridge’in çalışmaları için kullanabileceği harika özelliklere sahiptir. Bu sayfa, bu teknolojinin ürün ve hizmetlerin geliştirilmesine nasıl yardımcı olabileceğini açıklar.</p>
+                <ul>
+                    <li><strong>Ürünler:</strong> Cleverbridge, PS5’in 3D grafiklerini çevrimiçi mağazalar için kullanabilir. Müşteriler, ürünleri daha heyecan verici ve gerçekçi bir şekilde görüntüleyebilir ve etkileşimde bulunabilir.</li>
+                    <li><strong>Çalışan Eğitimi:</strong> PS5’in multimedya özellikleri, çalışan eğitimi için de faydalı olabilir. Örneğin, sanal gerçeklik, farklı iş rollerine yönelik gerçekçi eğitim oturumları oluşturmak için kullanılabilir.</li>
+                    <li><strong>Kapsayıcılık:</strong> Kontrol cihazının özel geri bildirim sistemi, engelli bireyler için araçlar geliştirmeye yardımcı olabilir. Bu, Cleverbridge’in ürünlerinin herkes için yararlı olmasını sağlayabilir.</li>
+                    <li><strong>Gelecek Büyüme:</strong> PS5’ten alınan fikirlerle Cleverbridge, teknolojide önde olabilir, müşteri deneyimlerini iyileştirebilir ve yeni alanlara büyüyebilir.</li>
+                </ul>`,
+            mainPageButton: "Ana Sayfa"
+        },
+        am: {
+            title: "ለክሌቨርብሪጅ መተግበሪያዎች",
+            content: `>
+                <p>PlayStation 5 ክሌቨርብሪጅ ለስራው ሊጠቀምባቸው የሚችላቸው አንዳንድ አስደናቂ ባህሪያት አሉት። ይህ ገጽ ቴክኖሎጂው ምርቶችን እና አገልግሎቶችን ለማሻሻል እንዴት እንደሚረዳ ያብራራል።</p>
+                <ul>
+                    <li><strong>ምርቶች:</strong> ክሌቨርብሪጅ የPS5ን 3-ል ግራፊክስ ለመስመር ላይ መደብሮች መጠቀም ይችላል። ደንበኞች የበለጠ አስደሳች እና ተጨባጭ በሆነ መንገድ ምርቶችን ማየት እና መገናኘት ይችላሉ።</li>
+                    <li><strong>የሰራተኛ ማሰልጠኛ፡ </strong> የመቆጣጠሪያው ልዩ የግብረመልስ ስርዓት ለአካል ጉዳተኞች መሳሪያዎችን ለመስራት ሊያግዝ ይችላል። ይህ የክሌቨርብሪጅ ምርቶች ለሁሉም ሰው ጠቃሚ መሆናቸውን ማረጋገጥ ይችላል።</li>
+                    <li><strong>አካታችነት</strong> ለማንኛውም በርኩሽነት የምርት ማቅረብ በክሌቨርብሪጅ አቅርብታቸውን ይደርሳል።</li>
+                    <li><strong>የወደፊት እድገት፡</strong> ከPS5 የመጡ ሃሳቦችን በመጠቀም ክሌቨርብሪጅ በቴክኖሎጂ ወደፊት ሊቆይ፣ የደንበኛ ተሞክሮዎችን ማሻሻል እና ወደ አዲስ አካባቢዎች ማደግ ይችላል።</li>
+                </ul>`,
+            mainPageButton: "ዋና ገጽ"
+        }
+    };
+
+    let currentLanguage = new URLSearchParams(window.location.search).get('lang') || 'en';
+
+    function setLanguage(language) {
+        currentLanguage = language;
+        updateContent();
+    }
+
+    function updateContent() {
+        document.getElementById("title").innerText = translations[currentLanguage].title;
+        document.getElementById("content").innerHTML = translations[currentLanguage].content;
+
+        // Update the Main Page button text
+        const mainPageButton = document.getElementById("mainPageButton");
+        if (mainPageButton) {
+            mainPageButton.innerText = translations[currentLanguage].mainPageButton;
+        }
+    }
+
+    function navigateToPage(page) {
+        const url = new URL(page, window.location.origin);
+        url.searchParams.append("lang", currentLanguage);
+        window.location.href = url;
+    }
+
+    // Set initial content
+    updateContent();
+</script>
+</body>
+</html>

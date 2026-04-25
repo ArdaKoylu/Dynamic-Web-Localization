@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia Demonstration</title>
+    <link rel="stylesheet" href="styles/subPage2Style.css">
+</head>
+<body>
+<h1 id="title"></h1>
+
+<section id="content"></section>
+
+<nav>
+    <a id="mainPageButton" href="index.html" class="styled-button">Main Page</a>
+</nav>
+
+<div id="language-switcher">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('de')">Deutsch</button>
+    <button onclick="setLanguage('tr')">Türkçe</button>
+    <button onclick="setLanguage('am')">አማርኛ</button>
+</div>
+
+<script>
+    const translations = {
+        en: {
+            title: "Multimedia Demonstration",
+            content: `<h2>Auditory Experience</h2>
+                <p>Listen to custom audio effects demonstrating PS5 themes:</p>
+                <audio controls><source src="assets/sounds/PS5 Platinum Trophy Sound Effect (edited).wav" type="audio/wav"></audio>
+                <audio controls><source src="assets/sounds/Startup Sound Edited.mp3" type="audio/wav"></audio>
+                <audio controls><source src="assets/sounds/PS5 Notification Sound.mp3" type="audio/mp3"></audio>
+		
+                <h2>Visual Insights</h2>
+                <img src="assets/visuals/graphic1.webp" alt="PS5 console">
+                <img src="assets/visuals/graphic2.webp" alt="Accessibility">
+                <p>Description: Explore how multimedia enhances the PS5 experience and accessibility.</p>`,
+            mainPageButton: "Main Page"
+        },
+
+        de: {
+            title: "Multimedia-Demonstration",
+            content: `<h2>Hörerfahrung</h2>
+                <p>Hören Sie sich benutzerdefinierte Audioeffekte an, die PS5-Themen demonstrieren:</p>
+                <audio controls><source src="assets/sounds/PS5 Platinum Trophy Sound Effect (edited).wav" type="audio/wav"></audio>
+                <audio controls><source src="assets/sounds/Startup Sound Edited.mp3" type="audio/wav"></audio>
+				<audio controls><source src="assets/sounds/PS5 Notification Sound.mp3" type="audio/mp3"></audio>
+
+                <h2>Visuelle Einblicke</h2>
+                <img src="assets/visuals/graphic1.webp" alt="PS5 console">
+                <img src="assets/visuals/graphic2.webp" alt="Accessibility">
+                <p>Beschreibung: Entdecken Sie, wie Multimedia das PS5-Erlebnis und die Zugänglichkeit verbessert.</p>`,
+            mainPageButton: "Hauptseite"
+        },
+
+        tr: {
+            title: "Multimedya Gösterimi",
+            content: `<h2>İşitsel Deneyim</h2>
+                <p>PS5 temalarını gösteren özel ses efektlerini dinleyin:</p>
+                <audio controls><source src="assets/sounds/PS5 Platinum Trophy Sound Effect (edited).wav" type="audio/wav"></audio>
+                <audio controls><source src="assets/sounds/Startup Sound Edited.mp3" type="audio/wav"></audio>
+				<audio controls><source src="assets/sounds/PS5 Notification Sound.mp3" type="audio/mp3"></audio>
+
+                <h2>Görsel Bilgiler</h2>
+                <img src="assets/visuals/graphic1.webp" alt="PS5 console">
+                <img src="assets/visuals/graphic2.webp" alt="Accessibility">
+                <p>Açıklama: Multimedyanın PS5 deneyimini ve erişilebilirliğini nasıl geliştirdiğini keşfedin.</p>`,
+            mainPageButton: "Ana Sayfa"
+        },
+
+        am: {
+            title: "የተባባሪ ሚዲያ ድርጅት",
+            content: `<h2>የምስማር ተሞክሮ</h2>
+                <p>በ PS5 የተሰራ የድምፅ ተሞክሮዎችን ያስሱ፦</p>
+                <audio controls><source src="clickSoundEditedVol2.wav" type="audio/wav"></audio>
+                <audio controls><source src="newAudioEffect.wav" type="audio/wav"></audio>
+				<audio controls><source src="assets/sounds/PS5 Notification Sound.mp3" type="audio/mp3"></audio>
+
+                <h2>እንደቅኝ</h2>
+                <img src="assets/visuals/graphic1.webp" alt="PS5 console">
+                <img src="assets/visuals/graphic2.webp" alt="Accessibility">
+                <p>መግለጫ፡ መልቲሚዲያ እንዴት የPS5 ልምድን እና ተደራሽነትን እንደሚያሳድግ ያስሱ።</p>`,
+            mainPageButton: "ዋና ገጽ"
+        }
+    };
+
+    let currentLanguage = new URLSearchParams(window.location.search).get('lang') || 'en';
+
+    function setLanguage(language) {
+        currentLanguage = language;
+        updateContent();
+    }
+
+    function updateContent() {
+        document.getElementById("title").innerText = translations[currentLanguage].title;
+        document.getElementById("content").innerHTML = translations[currentLanguage].content;
+
+        // Update the Main Page button text
+        const mainPageButton = document.getElementById("mainPageButton");
+        if (mainPageButton) {
+            mainPageButton.innerText = translations[currentLanguage].mainPageButton;
+        }
+    }
+
+    function navigateToPage(page) {
+        const url = new URL(page, window.location.origin);
+        url.searchParams.append("lang", currentLanguage);
+        window.location.href = url;
+    }
+
+    // Set initial content
+    updateContent();
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+body {
+    background-image: url("https://wallpapers.com/images/hd/playstation-ps5-console-nsndc8ewygduy1nh.jpg");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;	
+    height: 1000px;
+    overflow-y: scroll;
+    background-attachment: fixed;
+}
+
+
+.logo {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: 300px;
+    left: 1400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+@font-face {
+    font-family: 'myFont';
+    src: url('../assets/fonts/myFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'myFont', sans-serif;
+    font-size: 4.5rem;
+    color: #3b82f6;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+p {
+  text-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+p.mainPageP {
+  margin-left: 20px;
+  margin-bottom: 50px;
+  width: 850px;
+  font-size: 1.2rem;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 2px solid #3b82f6;
+  white-space: normal;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 450px;
+}
+
+p.description {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #3b82f6;
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: 20px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.buttonPaneText {
+  color: white;
+  text-align: left;
+  margin-bottom: 10px;
+
+}
+
+nav.button-group {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+}
+
+nav.button-group > button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav.button-group > button:hover {
+  background-color: #2563eb;
+}
+
+#language-switcher {
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#language-switcher > button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#language-switcher > button:hover {
+  background-color: #2563eb;
+}
+
+.created-by {
+  position: absolute;
+  left: 1400px;
+  top: 500px;
+  margin: 0;
+  width: 450px;
+  font-size: 1.2rem;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 2px solid #3b82f6;
+  white-space: normal;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.created-by h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.creators {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.creators p {
+  top: 600px;
+  left: 1400px;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+.styled-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #2563eb;
+}
+
+#footer-text{
+  margin-left: 20px;
+  margin-bottom: 50px;
+  width: 850px;
+  font-size: 1.2rem;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 2px solid #3b82f6;
+  white-space: normal;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 880px;
+}
+
+

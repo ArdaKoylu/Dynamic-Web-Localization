@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PS5 Technology</title>
+    <link rel="stylesheet" href="styles/subPage1Style.css">
+</head>
+<body>
+<h1 id="title"></h1>
+
+<section id="content"></section>
+
+<nav>
+    <a id="mainPageButton" href="index.html" class="styled-button">Main Page</a>
+</nav>
+
+<div id="language-switcher">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('de')">Deutsch</button>
+    <button onclick="setLanguage('tr')">Türkçe</button>
+    <button onclick="setLanguage('am')">አማርኛ</button>
+</div>
+
+<script>
+    const translations = {
+        en: {
+            title: "PS5 Technology",
+            content: `<h1>Overview</h1>
+                <h2>About PlayStation 5</h2>
+                <p>The PlayStation 5, or PS5, is Sony's latest gaming console. It was released in 2020 and is known for its fast performance, high-quality graphics, and exciting new features.
+                The console has a powerful processor and graphics system that allows games to look and feel more realistic. It can handle detailed graphics, smooth gameplay, and even ray tracing, which makes lighting in games more lifelike. 
+                One of the coolest features is the DualSense controller. It has special triggers that can change how they feel and a feedback system that makes you feel things like vibrations or the tension of pulling a bowstring. 
+                The PS5 also has amazing sound technology. It can create 3D sound effects, so you feel like you're in the game, hearing everything around you. 
+                Beyond gaming, the PS5 can be used to watch movies and shows on apps like Netflix. It’s not just a gaming machine—it’s an all-in-one entertainment system.</p>`,
+            footerText: "Created by Mo and Arda",
+            mainPageButton: "Main Page"
+        },
+        de: {
+            title: "PS5-Technologie",
+            content: `<h1>Übersicht</h1>
+                <h2>Über die PlayStation 5</h2>
+                <p>Die PlayStation 5, oder PS5, ist die neueste Spielekonsole von Sony. Sie wurde 2020 veröffentlicht und ist bekannt für ihre hohe Leistung, hochwertige Grafik und aufregende neue Funktionen. 
+                Die Konsole verfügt über einen leistungsstarken Prozessor und ein Grafiksystem, das Spiele realistischer aussehen und sich anfühlen lässt. Sie kann detaillierte Grafiken, flüssiges Gameplay und sogar Raytracing verarbeiten, wodurch Licht in Spielen lebensechter wird. 
+                Eines der coolsten Features ist der DualSense-Controller. Er hat spezielle Trigger, die sich unterschiedlich anfühlen können, und ein Feedback-System, das Dinge wie Vibrationen oder die Spannung eines Bogenseils spürbar macht. 
+                Die PS5 verfügt außerdem über eine erstaunliche Soundtechnologie. Sie kann 3D-Soundeffekte erzeugen, sodass Sie das Gefühl haben, im Spiel zu sein und alles um Sie herum zu hören. 
+                Über das Spielen hinaus kann die PS5 verwendet werden, um Filme und Serien auf Apps wie Netflix anzusehen. Sie ist nicht nur eine Spielekonsole – sie ist ein komplettes Unterhaltungssystem.</p>`,
+            footerText: "Erstellt von Mo und Arda",
+            mainPageButton: "Hauptseite"
+        },
+        tr: {
+            title: "PS5 Teknolojisi",
+            content: `<h1>Genel Bakış</h1>
+                <h2>PlayStation 5 Hakkında</h2>
+                <p>PlayStation 5, veya PS5, Sony'nin en yeni oyun konsoludur. 2020 yılında piyasaya sürülmüş ve hızlı performansı, yüksek kaliteli grafikleri ve heyecan verici yeni özellikleriyle tanınmıştır. 
+                Konsol, oyunları daha gerçekçi görünmesini ve hissettirmesini sağlayan güçlü bir işlemci ve grafik sistemine sahiptir. Ayrıntılı grafikleri, akıcı oynanışı ve hatta oyunlarda ışıklandırmayı daha gerçekçi hale getiren ışın izlemeyi kolayca işleyebilir. 
+                En havalı özelliklerden biri DualSense kontrol cihazıdır. Farklı hissettirebilen özel tetikleyicilere ve titreşimler veya bir yay ipini çekmenin gerginliği gibi şeyleri hissetmenizi sağlayan bir geri bildirim sistemine sahiptir. 
+                PS5 ayrıca harika bir ses teknolojisine sahiptir. Oyunun içindeymişsiniz gibi hissetmenizi sağlayan 3D ses efektleri oluşturabilir. 
+                Oyun oynamanın ötesinde, PS5 Netflix gibi uygulamalarda film ve diziler izlemek için de kullanılabilir. Sadece bir oyun makinesi değil – her şeyin bir arada olduğu bir eğlence sistemidir.</p>`,
+            footerText: "Mo ve Arda tarafından oluşturuldu",
+            mainPageButton: "Ana Sayfa"
+        },
+        am: {
+            title: "የ PS5 ቴክኖሎጂ",
+            content: `<h1>እይታ</h1>
+                <h2>ስለ ፕሌይስተሽን 5</h2>
+                <p>ፕሌይ ስቴሽን 5 ወይም PS5 የ Sony አዲሱ የጨዋታ ኮንሶል ነው። በ2020 የተለቀቀው በከፍተኛ አፈፃፀሙ፣ ከፍተኛ ጥራት ባለው ግራፊክስ እና በአስደሳች አዳዲስ ባህሪያት ይታወቃል። 
+                ኮንሶሉ ጨዋታዎችን የበለጠ እውነታዊ እንዲመስሉ እና እንዲሰማቸው የሚያደርግ ኃይለኛ ፕሮሰሰር እና የግራፊክስ ሲስተም አለው። እሱ ዝርዝር ግራፊክስ፣ ለስላሳ የጨዋታ ጨዋታ እና የጨረር ፍለጋን እንኳን ማስተናገድ ይችላል። 
+                PS5 አስደናቂ የድምፅ ቴክኖሎጂም አለው። በጨዋታው ውስጥ እንዳለህ እንዲሰማህ በማድረግ 3D የድምፅ ተጽዕኖዎችን መፍጠር ይችላል። 
+                ከጨዋታ ባሻገር፣ PS5 እንደ ኔትፍሊክስ ባሉ መተግበሪያዎች ላይ ፊልሞችን እና ተከታታዮችን ለመመልከት ሊያገለግል ይችላል።</p>`,
+            footerText: "በሞ እና አርዳ የተፈጠረ",
+            mainPageButton: "ዋና ገጽ"
+        }
+    };
+
+    let currentLanguage = new URLSearchParams(window.location.search).get('lang') || 'en';
+
+    function setLanguage(language) {
+        currentLanguage = language;
+        updateContent();
+    }
+
+    function updateContent() {
+        document.getElementById("title").innerText = translations[currentLanguage].title;
+        document.getElementById("content").innerHTML = translations[currentLanguage].content;
+        document.getElementById("footer-text").innerText = translations[currentLanguage].footerText;
+
+        // Update the Main Page button text
+        const mainPageButton = document.getElementById("mainPageButton");
+        if (mainPageButton) {
+            mainPageButton.innerText = translations[currentLanguage].mainPageButton;
+        }
+    }
+
+    // Set initial content
+    updateContent();
+</script>
+</body>
+</html>
